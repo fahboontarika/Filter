@@ -26,11 +26,3 @@ title('Original image')
 subplot(212)
 imshow(I_g);
 title('Gaussian filtered image')
-%% L = (s*2.5*2)+1;
-for x = 1:L
-    for y = 1:L
-        Hg(x,y) = exp((-(x^2)+(y^2))/(2*(s^2)));
-    end
-end
-I_g = conv2(I,Hg);
-I_g = uint8(I_g);
